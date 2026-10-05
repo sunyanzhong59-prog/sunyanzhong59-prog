@@ -1,4 +1,5 @@
-# Hi, I'm MirSun (孙言中) 👋
+# Hi, I'm MirSun (孙延仲) 👋
+
 
 🔐 Smart Contract Security Researcher & Bug Bounty Hunter
 📍 China · Discord: `suiyanzhong5519`
