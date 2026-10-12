@@ -16,6 +16,13 @@ I hunt vulnerabilities in Web3 protocols and turn my findings into reusable meth
 **Discipline:**&#8203; zero PoC → never submit (Iron Rule §1)
 **Methodology:**&#8203; 4-lens audit (second-layer / economic / permission / lifecycle)
 
+## 🧪 Adversarial PoC Samples — [sherlock-samples](https://github.com/sunyanzhong59-prog/sherlock-samples)
+
+Two self-contained Solidity exploit samples targeting AI-auditor blind spots (complex economics & mechanism interaction) — **verified 10/10 PASS on-chain** (solc 0.8.26 + anvil + cast, fully reproducible):
+
+- **Fee-bypass (Medium)** — same-result × two-paths: an unauthenticated router entry routes around a 1% deposit fee entirely (100% fee revenue loss)
+- **Cross-function reentrancy (High)** — ERC777 hook fires mid-`withdraw` while `totalShares` is stale; unguarded `deposit` mints shares at the deflated price — single round drains 33% of a victim deposit, 3-round compounding reaches **80.68% pool share**
+
 ## 📚 Open Datasets (Apache-2.0)
 
 I publish training data so anyone can build auditors that reason like I do.
